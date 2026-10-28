@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "virtual_bhoomika_business_theme"
+version = "0.1.0"
+description = "Green-and-white business theme for ERPNext Desk"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Virtual Bhoomika", email = "grow@virtualbhoomika.com" }]
+dependencies = []
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["virtual_bhoomika_business_theme*"]
+
+[tool.setuptools.package-data]
+virtual_bhoomika_business_theme = ["public/css/*.css", "modules.txt"]

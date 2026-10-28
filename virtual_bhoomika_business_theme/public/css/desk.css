@@ -1,0 +1,292 @@
+/*
+ * Virtual Bhoomika Business Theme — ERPNext/Frappe v15
+ * CSS-only theme. No JS bundle or package.json is required.
+ */
+
+:root {
+  --vb-green: #00BF63;
+  --vb-green-dark: #008F4C;
+  --vb-green-hover: #00A957;
+  --vb-green-soft: #EAF9F1;
+  --vb-green-pale: #F5FCF8;
+  --vb-white: #FFFFFF;
+  --vb-text: #17211B;
+  --vb-muted: #64736A;
+  --vb-border: #E1E9E4;
+  --vb-surface: #FFFFFF;
+  --vb-page: #F7FAF8;
+  --vb-focus: rgba(0, 191, 99, 0.22);
+  --vb-radius: 10px;
+  --vb-shadow: 0 2px 10px rgba(22, 54, 36, 0.045);
+}
+
+/* Base surfaces and typography */
+body,
+body[data-route],
+.page-container,
+.layout-main-section,
+.main-section {
+  color: var(--vb-text);
+}
+
+body {
+  background: var(--vb-page);
+}
+
+a,
+.text-muted a,
+.form-link {
+  color: var(--vb-green-dark);
+}
+
+a:hover,
+.text-muted a:hover,
+.form-link:hover {
+  color: var(--vb-green);
+}
+
+::selection {
+  color: #06351E;
+  background: #C9F3DA;
+}
+
+/* Main navbar */
+.navbar,
+header.navbar,
+.desk-navbar {
+  background: var(--vb-white);
+  border-bottom: 1px solid var(--vb-border);
+  box-shadow: 0 1px 5px rgba(20, 45, 30, 0.025);
+}
+
+.navbar .nav-link,
+.navbar .navbar-nav > li > a {
+  color: var(--vb-text);
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-nav > li > a:hover {
+  color: var(--vb-green-dark);
+}
+
+/* Sidebar and navigation selections */
+.desk-sidebar,
+.layout-side-section,
+.standard-sidebar,
+.sidebar {
+  background: var(--vb-white);
+}
+
+.desk-sidebar .item-anchor,
+.standard-sidebar .item-anchor,
+.sidebar-item-container .item-anchor {
+  border-radius: 8px;
+}
+
+.desk-sidebar .item-anchor:hover,
+.standard-sidebar .item-anchor:hover,
+.sidebar-item-container .item-anchor:hover {
+  background: var(--vb-green-pale);
+}
+
+.desk-sidebar .item-anchor.active,
+.standard-sidebar .item-anchor.active,
+.sidebar-item-container .item-anchor.active {
+  color: var(--vb-green-dark);
+  background: var(--vb-green-soft);
+  font-weight: 600;
+}
+
+/* Primary and secondary buttons */
+.btn-primary,
+button.btn-primary,
+.btn-primary:focus {
+  color: #FFFFFF;
+  background: var(--vb-green-dark);
+  border-color: var(--vb-green-dark);
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #FFFFFF;
+  background: #007D42;
+  border-color: #007D42;
+}
+
+.btn-default,
+.btn-secondary,
+.btn-light {
+  color: var(--vb-text);
+  background: #FFFFFF;
+  border-color: var(--vb-border);
+}
+
+.btn-default:hover,
+.btn-secondary:hover,
+.btn-light:hover {
+  color: var(--vb-green-dark);
+  background: var(--vb-green-pale);
+  border-color: #B9E8CC;
+}
+
+/* Inputs and keyboard focus */
+.form-control,
+input,
+select,
+textarea,
+.awesomplete input {
+  border-color: var(--vb-border);
+  border-radius: 7px;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.awesomplete input:focus {
+  border-color: var(--vb-green);
+  box-shadow: 0 0 0 3px var(--vb-focus);
+  outline: 0;
+}
+
+/* Cards and dashboard surfaces */
+.widget,
+.dashboard-widget-box,
+.number-widget-box,
+.card,
+.frappe-card,
+.form-dashboard-section,
+.section-box {
+  border-color: var(--vb-border);
+  border-radius: var(--vb-radius);
+  box-shadow: var(--vb-shadow);
+}
+
+.widget,
+.dashboard-widget-box,
+.frappe-card,
+.form-dashboard-section {
+  background: var(--vb-surface);
+}
+
+/* List views and tables */
+.list-row-head,
+.list-row-head .list-header-subject,
+.datatable .dt-header .dt-cell {
+  background: #F7FAF8;
+}
+
+.list-row:hover,
+.list-row-container:hover,
+.datatable .dt-row:hover .dt-cell {
+  background: var(--vb-green-pale);
+}
+
+.list-row,
+.list-row-container,
+.datatable .dt-cell {
+  border-color: var(--vb-border);
+}
+
+/* Tabs and form sections */
+.nav-tabs .nav-link.active,
+.form-tabs-list .form-tabs-item.active {
+  color: var(--vb-green-dark);
+  border-bottom-color: var(--vb-green);
+}
+
+.nav-tabs .nav-link:hover,
+.form-tabs-list .form-tabs-item:hover {
+  color: var(--vb-green-dark);
+}
+
+.form-section .section-head,
+.form-dashboard-section .section-head {
+  color: var(--vb-text);
+}
+
+/* Checkboxes, toggles and progress */
+input[type="checkbox"],
+.form-check-input {
+  accent-color: var(--vb-green-dark);
+}
+
+.progress-bar {
+  background-color: var(--vb-green);
+}
+
+/* Badges and status chips */
+.indicator.green,
+.indicator-pill.green,
+.badge-success {
+  color: #086B3B;
+  background: #E2F7EA;
+}
+
+.indicator.blue,
+.indicator-pill.blue {
+  color: #205A91;
+  background: #E7F1FB;
+}
+
+/* Business-friendly visual accents, only when matching classes exist */
+.vb-business-card {
+  border: 1px solid var(--vb-border);
+  border-top: 3px solid var(--vb-green);
+  border-radius: var(--vb-radius);
+  background: #FFFFFF;
+  box-shadow: var(--vb-shadow);
+}
+
+.vb-business-card .vb-kpi-value {
+  color: var(--vb-green-dark);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.vb-business-card .vb-kpi-label {
+  color: var(--vb-muted);
+  font-size: 0.875rem;
+}
+
+.vb-business-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  color: #086B3B;
+  background: var(--vb-green-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Dialogs and dropdown menus */
+.modal-content,
+.dropdown-menu,
+.popover,
+.search-dialog {
+  border-color: var(--vb-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(22, 54, 36, 0.10);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--vb-green-dark);
+  background: var(--vb-green-pale);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

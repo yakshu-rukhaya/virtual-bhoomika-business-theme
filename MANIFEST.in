@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include virtual_bhoomika_business_theme *.css
+recursive-include virtual_bhoomika_business_theme *.js
+recursive-include virtual_bhoomika_business_theme *.html
+recursive-include virtual_bhoomika_business_theme *.json
+recursive-include virtual_bhoomika_business_theme *.txt
